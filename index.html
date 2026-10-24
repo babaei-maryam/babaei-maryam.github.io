@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مشاور بیمه | مریم بابائی </title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">مریم بابائی | نماینده و کارشناس بیمه دانا | کد 10790 </a>
+    <nav aria-label="منوی اصلی">
+      <a href="#why">چرا من</a>
+      <a href="#reviews">نظر مشتریان</a>
+      <a href="#contact">مشاوره</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- بخش اصلی -->
+  <div class="wrap hero">
+    <div>
+      <h1>بیمه‌ای انتخاب کن که وقتِ نیاز واقعاً جواب بده</h1>
+      <p class="lead">من کمکت می‌کنم شرایط بیمه‌نامه را بفهمی، قیمت‌ها را مقایسه کنی و پوششی بگیری که به زندگی و کارت بخورد.</p>
+      <a class="btn" href="#contact">درخواست مشاوره رایگان</a>
+    </div>
+
+    <div class="picker">
+      <h2>دنبال چه بیمه‌ای هستی؟</h2>
+      <div class="chips" id="chips"></div>
+      <div class="detail" id="detail" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <!-- چرا من -->
+  <section class="why" id="why">
+    <div class="wrap">
+      <h2>چرا با من کار کنی</h2>
+      <div class="grid">
+        <div class="item"><h3>مقایسه بی‌طرفانه</h3><p>پیشنهادها را کنار هم می‌گذارم و دلیل هر توصیه را می‌گویم، نه فقط قیمت را.</p></div>
+        <div class="item"><h3>زبان ساده</h3><p>بندها و استثنائات بیمه‌نامه را به زبانی توضیح می‌دهم که قبل از امضا بفهمی چه می‌خری.</p></div>
+        <div class="item"><h3>همراه تا خسارت</h3><p>فقط تا صدور بیمه‌نامه نمی‌مانم؛ در پیگیری خسارت هم کنارت هستم.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- نظر مشتریان (متن‌ها نمونه‌اند؛ با نظر واقعی عوض کن) -->
+  <section id="reviews">
+    <div class="wrap">
+      <h2>نظر مشتریان</h2>
+      <div class="grid">
+        <div class="quote"><p>قبل از تمدید بیمه‌نامه ماشین، تفاوت پوشش‌ها را برایم روشن کرد و هزینه‌ی اضافه نپرداختم.</p><small>نمونه: مشتری بیمه بدنه</small></div>
+        <div class="quote"><p>برای بیمه‌ی درمان خانواده، چند گزینه را با هم مقایسه کردیم و تصمیم‌گیری راحت شد.</p><small>نمونه: مشتری بیمه درمان</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- فرم تماس -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>مشاوره رایگان بگیر</h2>
+      <form id="form">
+        <label>نام و نام خانوادگی <input name="name" required autocomplete="name"></label>
+        <label>شماره تماس <input name="phone" type="tel" required autocomplete="tel" inputmode="tel"></label>
+        <label>نوع بیمه
+          <select name="type" id="typeSelect"></select>
+        </label>
+        <button class="btn" type="submit">ارسال درخواست</button>
+        <div id="msg" role="status"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">نام شما، مشاور بیمه. تلفن: ۰۹۱۲۰۰۰۰۰۰۰</div>
+</footer>
+
+</body>
+</html>
