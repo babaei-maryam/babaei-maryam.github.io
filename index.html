@@ -1,85 +1,118 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>مشاور بیمه | مریم بابائی </title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap">
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مشاوره بیمه | نام شما</title>
+  <meta name="description" content="مشاوره تخصصی بیمه عمر، درمان و خودرو">
+  <meta property="og:title" content="مشاوره بیمه | مریم بابائی">
+  <meta property="og:description" content="مشاوره تخصصی بیمه عمر، درمان و خودرو">
+  <meta property="og:type" content="website">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
 </head>
+
 <body>
+  <header>
+    <nav>
+      <a href="#home" class="logo">نام شما</a>
 
-<header>
-  <div class="wrap">
-    <a class="logo" href="#">مریم بابائی | نماینده و کارشناس بیمه دانا | کد 10790 </a>
-    <nav aria-label="منوی اصلی">
-      <a href="#why">چرا من</a>
-      <a href="#reviews">نظر مشتریان</a>
-      <a href="#contact">مشاوره</a>
+      <button class="menu-toggle" aria-label="باز و بسته کردن منو" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#services">خدمات</a></li>
+        <li><a href="#about">درباره من</a></li>
+        <li><a href="#contact">تماس</a></li>
+      </ul>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main>
-  <!-- بخش اصلی -->
-  <div class="wrap hero">
-    <div>
-      <h1>بیمه‌ای انتخاب کن که وقتِ نیاز واقعاً جواب بده</h1>
-      <p class="lead">من کمکت می‌کنم شرایط بیمه‌نامه را بفهمی، قیمت‌ها را مقایسه کنی و پوششی بگیری که به زندگی و کارت بخورد.</p>
-      <a class="btn" href="#contact">درخواست مشاوره رایگان</a>
-    </div>
+  <main>
+    <section id="home">
+      <h1>مشاوره تخصصی بیمه، متناسب با نیاز شما</h1>
+      <p>بهترین پوشش بیمه‌ای رو با هم انتخاب می‌کنیم.</p>
+      <a href="#contact">دریافت مشاوره رایگان</a>
+    </section>
 
-    <div class="picker">
-      <h2>دنبال چه بیمه‌ای هستی؟</h2>
-      <div class="chips" id="chips"></div>
-      <div class="detail" id="detail" aria-live="polite"></div>
-    </div>
-  </div>
+    <section id="services">
+      <h2>خدمات</h2>
 
-  <!-- چرا من -->
-  <section class="why" id="why">
-    <div class="wrap">
-      <h2>چرا با من کار کنی</h2>
-      <div class="grid">
-        <div class="item"><h3>مقایسه بی‌طرفانه</h3><p>پیشنهادها را کنار هم می‌گذارم و دلیل هر توصیه را می‌گویم، نه فقط قیمت را.</p></div>
-        <div class="item"><h3>زبان ساده</h3><p>بندها و استثنائات بیمه‌نامه را به زبانی توضیح می‌دهم که قبل از امضا بفهمی چه می‌خری.</p></div>
-        <div class="item"><h3>همراه تا خسارت</h3><p>فقط تا صدور بیمه‌نامه نمی‌مانم؛ در پیگیری خسارت هم کنارت هستم.</p></div>
+      <div class="cards">
+        <article class="card">
+          <h3>بیمه عمر</h3>
+          <p>توضیح کوتاه درباره این خدمت.</p>
+        </article>
+        <article class="card">
+          <h3>بیمه درمان</h3>
+          <p>توضیح کوتاه درباره این خدمت.</p>
+        </article>
+        <article class="card">
+          <h3>بیمه خودرو</h3>
+          <p>توضیح کوتاه درباره این خدمت.</p>
+        </article>
+        <article class="card">
+          <h3>بیمه مسئولیت</h3>
+          <p>توضیح کوتاه درباره این خدمت</p>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- نظر مشتریان (متن‌ها نمونه‌اند؛ با نظر واقعی عوض کن) -->
-  <section id="reviews">
-    <div class="wrap">
-      <h2>نظر مشتریان</h2>
-      <div class="grid">
-        <div class="quote"><p>قبل از تمدید بیمه‌نامه ماشین، تفاوت پوشش‌ها را برایم روشن کرد و هزینه‌ی اضافه نپرداختم.</p><small>نمونه: مشتری بیمه بدنه</small></div>
-        <div class="quote"><p>برای بیمه‌ی درمان خانواده، چند گزینه را با هم مقایسه کردیم و تصمیم‌گیری راحت شد.</p><small>نمونه: مشتری بیمه درمان</small></div>
+    <section id="about">
+      <h2>درباره من</h2>
+      <div class="about-content">
+        <img src="images/profile.webp" alt="کارشناس و مشاور بیمه" width="300" height="300" loading="lazy"
+          class="profile-img">
+        <div class="about-text">
+          <p>یک پاراگراف کوتاه درباره تجربه و تخصص شما.</p>
+          <button class="read-more-btn">بیشتر بخوان</button>
+          <p class="more-text hidden">این پاراگراف مخفی هست و با کلیک بر روی دکمه نمایش داده میشود</p>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- فرم تماس -->
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <h2>مشاوره رایگان بگیر</h2>
-      <form id="form">
-        <label>نام و نام خانوادگی <input name="name" required autocomplete="name"></label>
-        <label>شماره تماس <input name="phone" type="tel" required autocomplete="tel" inputmode="tel"></label>
-        <label>نوع بیمه
-          <select name="type" id="typeSelect"></select>
-        </label>
-        <button class="btn" type="submit">ارسال درخواست</button>
-        <div id="msg" role="status"></div>
+
+
+    </section>
+
+    <section id="contact">
+      <h2>تماس با من</h2>
+
+      <form class="contact-form" action="https://formspree.io/f/xyeedopp" method="POST">
+        <div class="form-group">
+          <label for="name">نام و نام خانوادگی</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">شماره تماس</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">ایمیل</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">پیام شما</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+
+        <button type="submit">ارسال درخواست</button>
       </form>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
-<footer>
-  <div class="wrap">نام شما، مشاور بیمه </div>
-</footer>
+  <footer>
+    <p>© ۱۴۰۵ تمامی حقوق محفوظ است.</p>
+  </footer>
 
 </body>
+
 </html>

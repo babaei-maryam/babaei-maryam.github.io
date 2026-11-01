@@ -1,312 +1,269 @@
-/* ۱) متغیرها: رنگ‌ها یک‌جا تعریف می‌شن تا تغییرشون آسون باشه */
+/* ========== متغیرها ========== */
 :root {
-  --bg: #f2f6f6;
-  --surface: #ffffff;
-  --ink: #12292e;
-  --muted: #4d6368;
-  --brand: #0f4c55;
-  --brand-ink: #ffffff;
-  --accent: #e8a33d;
-  --line: #d5e0e1;
-  box-sizing: border-box;
-  padding-top: env(safe-area-inset-top, 0px);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  --color-primary: #1e4d8c;
+  --color-primary-dark: #153a6b;
+  --color-accent: #f2a900;
+  --color-bg: #f7f9fc;
+  --color-text: #1f2937;
+  --color-white: #ffffff;
+
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  --radius: 12px;
 }
 
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0e1b1e;
-    --surface: #16282c;
-    --ink: #e9f1f1;
-    --muted: #a3b8bb;
-    --brand: #5fc0c9;
-    --brand-ink: #08191c;
-    --accent: #f0b254;
-    --line: #26403f;
-  }
-}
-
-:root[data-theme="dark"] {
-  --bg: #0e1b1e;
-  --surface: #16282c;
-  --ink: #e9f1f1;
-  --muted: #a3b8bb;
-  --brand: #5fc0c9;
-  --brand-ink: #08191c;
-  --accent: #f0b254;
-  --line: #26403f;
-}
-
-html {
-  scroll-padding-top: env(safe-area-inset-top, 0px);
-  scroll-behavior: smooth;
-}
-
-/* ۲) تنظیمات پایه */
+/* ========== ریست و پایه ========== */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
   font-family: "Vazirmatn", Tahoma, sans-serif;
-  line-height: 1.9;
-  font-size: 17px;
-}
-
-.wrap {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1.4;
-  margin: 0 0 .5em;
-
-}
-
-p {
-  margin: 0 0 1em;
-  max-width: 60ch;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.8;
 }
 
 a {
+  text-decoration: none;
   color: inherit;
 }
 
-:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
+ul {
+  list-style: none;
 }
 
-/* ۳) هدر */
+/* ========== هدر ========== */
 header {
-  border-bottom: 1px solid var(--line);
+  background-color: var(--color-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: var(--space-md) var(--space-lg);
 }
 
-header .wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
 
-.logo {
-  font-weight: 800;
-  font-size: 20px;
-  text-decoration: none;
-}
+
 
 nav {
   display: flex;
-  gap: 22px;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
-nav a {
-  text-decoration: none;
-  color: var(--muted);
-}
 
 nav a:hover {
-  color: var(--ink);
+  color: var(--color-primary);
 }
 
-/* ۴) دکمه‌ها */
-.btn {
-  display: inline-block;
-  background: var(--brand);
-  color: var(--brand-ink);
-  padding: 12px 26px;
-  border-radius: 10px;
-  border: 0;
-  font: inherit;
-  font-weight: 600;
-  text-decoration: none;
+/* ========== منوی موبایل ========== */
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
   cursor: pointer;
+  color: var(--color-primary);
 }
 
-.btn:hover {
-  filter: brightness(1.1);
+.nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
 }
 
-/* ۵) بخش اصلی: دو ستون، روی موبایل زیر هم */
-.hero {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 48px;
-  align-items: center;
-  padding: 72px 0;
-}
-
-.hero h1 {
-  font-size: clamp(32px, 5vw, 52px);
-  font-weight: 800;
-}
-
-.hero .lead {
-  color: var(--muted);
-  font-size: 19px;
-}
-
-/* پنل تعاملی انتخاب نوع بیمه */
-.picker {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 24px;
-}
-
-.picker h2 {
-  font-size: 18px;
-}
-
-.chips {
+.nav-links.open {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 18px;
 }
 
-.chip {
-  font: inherit;
-  padding: 6px 16px;
-  border-radius: 99px;
-  cursor: pointer;
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--ink);
+
+
+
+/* ========== بخش اصلی (Hero) ========== */
+#home {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
 }
 
-.chip[aria-pressed="true"] {
-  background: var(--brand);
-  color: var(--brand-ink);
-  border-color: var(--brand);
+#home h1 {
+  font-size: 2.2rem;
+  margin-bottom: var(--space-md);
 }
 
-.detail {
-  border-right: 4px solid var(--accent);
-  padding-right: 14px;
-  min-height: 150px;
+#home a {
+  display: inline-block;
+  margin-top: var(--space-lg);
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius);
+  font-weight: bold;
 }
 
-.detail h3 {
-  font-size: 20px;
+#home a:hover {
+  background-color: var(--color-white);
 }
 
-.detail p {
-  color: var(--muted);
-  margin-bottom: .6em;
+/* ========== بخش‌ها ========== */
+section:not(#home) {
+  padding: var(--space-xl) var(--space-lg);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* ۶) بخش‌های معمولی */
-section {
-  padding: 56px 0;
+h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
 }
 
-section>.wrap>h2 {
-  font-size: 30px;
-  margin-bottom: 28px;
+.hidden {
+  display: none;
 }
 
-.grid {
+/* ========== کارت‌های خدمات ========== */
+.cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
+  gap: var(--space-lg);
 }
 
-.why .item {
-  border-top: 3px solid var(--brand);
-  padding-top: 14px;
+.card {
+  background-color: var(--color-white);
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+  border-top: 4px solid var(--color-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.why h3 {
-  font-size: 20px;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
-.why p {
-  color: var(--muted);
+.card h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
 }
 
-.quote {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 22px;
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
 }
 
-.quote small {
-  color: var(--muted);
+.about-text {
+  flex: 1;
 }
 
-/* ۷) فرم تماس */
-.contact {
-  background: var(--surface);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-form {
-  display: grid;
-  gap: 14px;
-  max-width: 480px;
+.profile-img {
+  border-radius: 10%;
+  object-fit: cover;
+  margin-bottom: var(--space-md);
+  flex-shrink: 0;
 }
 
-label {
-  display: grid;
-  gap: 4px;
-  font-weight: 600;
+/* ========== فرم تماس ========== */
+.contact-form {
+  background-color: var(--color-white);
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  max-width: 600px;
 }
 
-input,
-select {
-  font: inherit;
-  padding: 11px 12px;
-  border-radius: 10px;
-  border: 1px solid var(--line);
-  background: var(--bg);
-  color: var(--ink);
+.form-group {
+  margin-bottom: var(--space-md);
 }
 
-#msg {
-  font-weight: 600;
-  color: var(--brand);
-  min-height: 1.9em;
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-sm);
+  font-weight: bold;
 }
 
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.contact-form button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+
+/* ========== فوتر ========== */
 footer {
-  padding: 28px 0;
-  color: var(--muted);
-  font-size: 15px;
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--space-lg);
 }
 
-@media (max-width:760px) {
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 44px 0;
-    gap: 32px;
-  }
-  header .wrap {
-    flex-direction: column;
-    gap: 8px;
+/* ========== دسکتاپ (صفحه‌های بزرگ‌تر از 768px) ========== */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
   }
 
-  section {
-    padding: 36px 0;
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: var(--space-lg);
+    padding-top: 0;
   }
-  
-}
 
-@media (prefers-reduced-motion:reduce) {
-  html {
-    scroll-behavior: auto;
+  #home h1 {
+    font-size: 3rem;
+  }
+
+  .about-content {
+    flex-direction: row;
+    align-items: flex-start;
   }
 }
