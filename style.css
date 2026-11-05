@@ -236,6 +236,38 @@ img {
 }
 
 
+/* ========== دکمه‌ی واتس‌اپ ========== */
+.whatsapp-btn {
+  position: fixed;
+  bottom: var(--space-md);
+  left: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  width: 56px;
+  height: 56px;
+  background-color: #25d366;
+  color: var(--color-white);
+  border-radius: 999px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5b;
+}
+
+.whatsapp-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.whatsapp-text {
+  display: none;
+}
+
+
 /* ========== فوتر ========== */
 footer {
   background-color: var(--color-primary-dark);
@@ -288,5 +320,17 @@ footer {
   .about-content {
     flex-direction: row;
     align-items: flex-start;
+  }
+
+  .whatsapp-btn {
+    width: auto;
+    height: auto;
+    padding: 0.8rem 1.5rem;
+    bottom: var(--space-lg);
+    left: var(--space-lg);
+  }
+
+  .whatsapp-text {
+    display: inline;
   }
 }
