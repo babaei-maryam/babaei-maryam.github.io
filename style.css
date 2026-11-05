@@ -185,7 +185,42 @@ img {
   flex-shrink: 0;
 }
 
+/* ========== راه‌های ارتباطی ========== */
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background-color: var(--color-white);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  border-right: 4px solid var(--color-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-3px);
+}
+
+.contact-label {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.contact-value {
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
 /* ========== فرم تماس ========== */
+
 .contact-form {
   background-color: var(--color-white);
   padding: var(--space-lg);
