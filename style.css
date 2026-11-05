@@ -244,6 +244,29 @@ footer {
   padding: var(--space-lg);
 }
 
+/* ========== سؤالات متداول ========== */
+.faq-list {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.faq-item {
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: var(--space-md) var(--space-lg);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.faq-item[open] summary {
+  margin-bottom: var(--space-sm);
+}
+
 /* ========== دسکتاپ (صفحه‌های بزرگ‌تر از 768px) ========== */
 @media (min-width: 768px) {
   .menu-toggle {
