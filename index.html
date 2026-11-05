@@ -37,6 +37,7 @@
         <li><a href="#about">درباره من</a></li>
         <li><a href="#contact">تماس</a></li>
         <li><a href="#faq">سؤالات متداول</a></li>
+        <li><a href="#quote">استعلام قیمت</a></li>
       </ul>
     </nav>
   </header>
@@ -105,6 +106,63 @@
           <p>کپی کارت ملی و مدارک مربوط به نوع بیمه.</p>
         </details>
       </div>
+    </section>
+
+
+    <section id="quote">
+      <h2>استعلام قیمت بیمه خودرو</h2>
+      <p>اطلاعات خودرو رو وارد کن تا قیمت رو از شرکت‌های بیمه استعلام کنم و برات بفرستم.</p>
+
+      <form class="contact-form" action="https://formspree.io/f/xyeedopp" method="POST">
+        <input type="hidden" name="_subject" value="درخواست استعلام قیمت بیمه خودرو">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <fieldset class="radio-group">
+          <legend>نوع بیمه</legend>
+          <label><input type="radio" name="insurance_type" value="ثالث" checked> شخص ثالث</label>
+          <label><input type="radio" name="insurance_type" value="بدنه"> بدنه</label>
+          <label><input type="radio" name="insurance_type" value="ثالث و بدنه"> هر دو</label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="q-name">نام و نام خانوادگی</label>
+          <input type="text" id="q-name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="q-phone">شماره تماس</label>
+          <input type="tel" id="q-phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="q-car">برند و مدل خودرو</label>
+          <input type="text" id="q-car" name="car" placeholder="مثلاً پژو ۲۰۶ تیپ ۵" required>
+        </div>
+
+        <div class="form-group">
+          <label for="q-year">سال ساخت</label>
+          <input type="number" id="q-year" name="year" min="1350" max="1410" placeholder="مثلاً ۱۴۰۰" required>
+        </div>
+
+        <div class="form-group third-fields">
+          <label for="q-discount">سال‌های تخفیف عدم خسارت ثالث</label>
+          <select id="q-discount" name="third_discount">
+            <option value="">نمی‌دونم / ندارم</option>
+            <option value="1">۱ سال</option>
+            <option value="2">۲ سال</option>
+            <option value="3">۳ سال</option>
+            <option value="4+">۴ سال یا بیشتر</option>
+          </select>
+        </div>
+
+        <div class="form-group body-fields hidden">
+          <label for="q-value">ارزش تقریبی خودرو (تومان)</label>
+          <input type="text" id="q-value" name="car_value" inputmode="numeric">
+        </div>
+
+        <button type="submit">ارسال درخواست استعلام</button>
+        <p class="form-note">اطلاعات شما فقط برای استعلام قیمت استفاده می‌شه.</p>
+      </form>
     </section>
 
     <section id="contact">
