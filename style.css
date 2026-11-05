@@ -219,6 +219,69 @@ img {
   overflow-wrap: anywhere;
 }
 
+
+
+/* ========== راهنمای بیمه ========== */
+.section-intro {
+  margin-bottom: var(--space-lg);
+  color: #64748b;
+}
+
+.guide-article {
+  background-color: var(--color-white);
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: var(--space-lg);
+}
+
+.guide-article h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.guide-article p {
+  margin-top: var(--space-md);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+
+caption {
+  text-align: right;
+  font-weight: bold;
+  margin-bottom: var(--space-sm);
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: right;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+thead th {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+}
+
+.steps {
+  padding-inline-start: var(--space-lg);
+}
+
+.steps li {
+  margin-bottom: var(--space-sm);
+}
+
+
+
 /* ========== فرم تماس ========== */
 
 .contact-form {
